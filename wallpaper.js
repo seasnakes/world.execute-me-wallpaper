@@ -104,6 +104,9 @@
       syncSuspension();
     },
     applyUserProperties(properties) {
+      if (properties.claude_ui && typeof properties.claude_ui.value === 'boolean') {
+        window.setClaudeUIEnabled(properties.claude_ui.value);
+      }
       if (properties.showlyrics && typeof properties.showlyrics.value === 'boolean') {
         window.setBilingualLyricsEnabled(properties.showlyrics.value);
       }
@@ -153,6 +156,7 @@
   function paint(time) {
     const frame = Math.min(frameCount - 1, normalized(time) * FPS);
     drawFrame(frame);
+    window.updateClaudeUI(normalized(time));
     window.updateBilingualLyrics(normalized(time));
   }
   function tick(now) {

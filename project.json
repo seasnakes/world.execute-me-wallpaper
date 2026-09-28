@@ -1,36 +1,41 @@
 {
-	"contentrating" : "Everyone",
-	"description" : "world.execute(me);二创mv｜基于opus5.5生成\n仅供学习交流 \nMusic and original lyrics: Mili — world.execute(me);",
-	"file" : "index.html",
-	"general" : 
-	{
-		"properties" : 
-		{
-			"schemecolor" : 
-			{
-				"order" : 0,
-				"text" : "ui_browse_properties_scheme_color",
-				"type" : "color",
-				"value" : "0 0 0"
-			},
-			"showlyrics" : 
-			{
-				"index" : 0,
-				"order" : 100,
-				"text" : "显示中英歌词 / Show lyrics",
-				"type" : "bool",
-				"value" : true
-			}
-		}
-	},
-	"preview" : "preview.jpg",
-	"ratingsex" : "none",
-	"ratingviolence" : "none",
-	"tags" : [ "Music" ],
-	"title" : "world.execute(me);二创mv｜基于opus5.5生成",
-	"type" : "web",
-	"version" : 2,
-	"visibility" : "public",
-	"workshopid" : "3808989186",
-	"workshopurl" : "steam://url/CommunityFilePage/3808989186"
+  "contentrating": "Everyone",
+  "description": "world.execute(me);二创mv｜基于opus5.5生成\n仅供学习交流 \nMusic and original lyrics: Mili — world.execute(me);",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0 0 0"
+      },
+      "showlyrics": {
+        "index": 0,
+        "order": 100,
+        "text": "显示中英歌词 / Show lyrics",
+        "type": "bool",
+        "value": true
+      },
+      "claude_ui": {
+        "index": 0,
+        "order": 110,
+        "text": "Claude 对话动画 / Claude UI",
+        "type": "bool",
+        "value": false
+      }
+    }
+  },
+  "preview": "preview.jpg",
+  "ratingsex": "none",
+  "ratingviolence": "none",
+  "tags": [
+    "Music"
+  ],
+  "title": "world.execute(me);二创mv｜基于opus5.5生成",
+  "type": "web",
+  "version": 2,
+  "visibility": "public",
+  "workshopid": "3808989186",
+  "workshopurl": "steam://url/CommunityFilePage/3808989186"
 }

@@ -1,0 +1,258 @@
+#claudeLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  color: #2a2b2d;
+}
+
+#claudeLayer[hidden] { display: none; }
+
+#claudeDesign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 720px;
+  transform-origin: top left;
+}
+
+#claudePanel {
+  position: absolute;
+  left: 85px;
+  top: 34px;
+  width: 1108px;
+  height: 650px;
+  overflow: hidden;
+  border: 2px solid #e2e2e1;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .34);
+  box-sizing: content-box;
+}
+
+.claude-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 66px;
+  border-bottom: 2px solid #e4e5e5;
+  background: #fafaf9;
+  box-sizing: border-box;
+}
+
+.claude-mark {
+  position: absolute;
+  left: 27px;
+  top: 23px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ca6f4d;
+}
+
+.claude-name {
+  position: absolute;
+  left: 50px;
+  top: 12px;
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.claude-project {
+  position: absolute;
+  right: 77px;
+  top: 19px;
+  font-size: 17px;
+  line-height: 28px;
+  color: #86888b;
+}
+
+.claude-menu {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  font-size: 17px;
+  line-height: 28px;
+  color: #86888b;
+}
+
+.claude-viewport {
+  position: absolute;
+  left: 18px;
+  top: 72px;
+  width: 1054px;
+  height: 512px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.claude-page { position: absolute; top: 0; left: 0; width: 1054px; }
+
+.claude-event { position: absolute; left: 0; width: 1054px; box-sizing: border-box; }
+
+.claude-event.user .bubble {
+  position: absolute;
+  left: 560px;
+  top: 4px;
+  width: 460px;
+  height: 71px;
+  padding: 17px 23px;
+  border-radius: 21px;
+  background: #f5f5f5;
+  box-sizing: border-box;
+  font-size: 25px;
+  line-height: 36px;
+}
+
+.claude-event.user .timestamp {
+  position: absolute;
+  left: 904px;
+  top: 80px;
+  font-size: 15px;
+  color: #818284;
+}
+
+.claude-event.assistant {
+  padding: 12px 30px 0 22px;
+  font-size: 23px;
+  line-height: 37px;
+  overflow: hidden;
+}
+
+.claude-event.status,
+.claude-event.summary {
+  padding: 13px 48px 0 22px;
+  font-size: 21px;
+  line-height: 32px;
+  color: #818284;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.claude-event.summary { color: #616264; }
+.claude-event.status::after,
+.claude-event.summary::after {
+  content: "›";
+  position: absolute;
+  right: 21px;
+  top: 9px;
+  font-size: 26px;
+  color: #818284;
+}
+.claude-event.summary::after { content: "⌄"; }
+
+.claude-event.row,
+.claude-event.error,
+.claude-event.preview {
+  left: 18px;
+  width: 1016px;
+  border: 2px solid #dee0e2;
+  border-radius: 3px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.claude-event .line {
+  position: absolute;
+  left: 22px;
+  right: 25px;
+  top: 10px;
+  font-size: 21px;
+  line-height: 34px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.claude-event .prefix { color: #818284; }
+.claude-event.error .main { color: #ab2a23; }
+.claude-event .main { margin-left: 10px; }
+
+.claude-event.row::after,
+.claude-event.error::after,
+.claude-event.preview::after {
+  content: "›";
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  font-size: 26px;
+  color: #818284;
+}
+
+.claude-event.preview .preview-image {
+  position: absolute;
+  left: 21px;
+  top: 48px;
+  max-width: 345px;
+  max-height: 107px;
+  padding: 4px;
+  border: 1px solid #dddfe1;
+  border-radius: 7px;
+  background: #f6f6f6;
+  box-sizing: content-box;
+}
+
+.claude-scroll-track {
+  position: absolute;
+  left: 1076px;
+  top: 72px;
+  width: 5px;
+  height: 512px;
+  background: #f1f2f3;
+}
+
+#claudeScrollThumb {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 7px;
+  min-height: 69px;
+  border-radius: 3px;
+  background: #bfc1c4;
+}
+
+.claude-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 57px;
+  border-top: 2px solid #e8e9ea;
+  background: #fff;
+}
+
+.claude-reply {
+  position: absolute;
+  left: 28px;
+  right: 30px;
+  top: 8px;
+  height: 40px;
+  padding: 8px 19px;
+  box-sizing: border-box;
+  border: 1px solid #dfe1e2;
+  border-radius: 17px;
+  background: #f8f8f7;
+  color: #9fa1a4;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.claude-send {
+  position: absolute;
+  right: 16px;
+  top: 3px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #e7e8e9;
+  color: #96989a;
+  text-align: center;
+  font-size: 21px;
+  line-height: 30px;
+}

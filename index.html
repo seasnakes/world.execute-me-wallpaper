@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>world.execute(me); — bilingual edition</title>
+  <link rel="stylesheet" href="claude-ui.css">
   <link rel="stylesheet" href="lyrics.css">
   <style>
     html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #05060a; }
@@ -17,11 +18,33 @@
       cursor: pointer;
     }
     #soundPrompt[hidden] { display: none; }
+    #uiToggle {
+      position: absolute; left: 18px; bottom: 18px; z-index: 4;
+      padding: 9px 12px; border: 1px solid #315061; border-radius: 5px;
+      background: #071119e8; color: #dce7f2; font: 12px ui-monospace, Consolas, monospace;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div id="stage">
     <canvas id="c" width="1920" height="1080" aria-label="world.execute(me); 动态壁纸"></canvas>
+    <div id="claudeLayer" hidden aria-label="Claude 对话进度动画">
+      <div id="claudeDesign">
+        <div id="claudePanel">
+          <div class="claude-header">
+            <span class="claude-mark"></span><span class="claude-name">Claude</span>
+            <span class="claude-project">world.execute(me); · MV 动画</span>
+            <span class="claude-menu">•••</span>
+          </div>
+          <div class="claude-viewport" id="claudeViewport"></div>
+          <div class="claude-scroll-track"><div id="claudeScrollThumb"></div></div>
+          <div class="claude-footer">
+            <div class="claude-reply">回复 Claude...<span class="claude-send">↑</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="lyricLayer" hidden aria-label="同步中英歌词">
       <div id="lyricDesign">
         <div id="lyricCard">
@@ -39,6 +62,7 @@
         </div>
       </div>
     </div>
+    <button id="uiToggle" type="button" aria-pressed="false">Claude UI：关</button>
     <button id="soundPrompt" type="button" hidden>选择本地音乐</button>
     <input id="songPicker" type="file" accept="audio/*,.mp3" hidden>
   </div>
@@ -47,6 +71,8 @@
   <script src="events.js"></script>
   <script src="common.js"></script>
   <script src="scenes2.js"></script>
+  <script src="claude-events.js"></script>
+  <script src="claude-ui.js"></script>
   <script src="lyrics-data.js"></script>
   <script src="lyrics.js"></script>
   <script src="wallpaper.js"></script>
