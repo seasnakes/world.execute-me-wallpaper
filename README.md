@@ -13,3 +13,4 @@
 ## 许可
 
 程序代码采用 [MIT License](LICENSE)。原曲及英文歌词归 Mili 等相应权利方所有。
+mili的相关版权指南: https://projectmili.com/copyright-guidelines
