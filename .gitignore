@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+node_modules/
+*.log
+*.zip
+
+# Each user supplies their own music locally. Never commit audio.
+song.mp3
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.aac
+*.ogg
+*.opus
+media/
